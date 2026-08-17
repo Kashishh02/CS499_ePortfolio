@@ -40,7 +40,7 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 12px;
             font-weight: bold;
         }
 
@@ -70,10 +70,17 @@
 
         h3 {
             color: #374151;
+            margin-top: 25px;
         }
 
         .artifact {
-            margin-top: 25px;
+            margin-top: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .artifact:last-child {
+            border-bottom: none;
         }
 
         .button {
@@ -90,12 +97,31 @@
             background-color: #374151;
         }
 
+        .outcome {
+            margin-bottom: 25px;
+        }
+
         footer {
             text-align: center;
             background-color: #1f2937;
             color: white;
             padding: 20px;
             margin-top: 30px;
+        }
+
+        @media (max-width: 700px) {
+            nav a {
+                display: block;
+                margin: 8px 0;
+            }
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            section {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -113,6 +139,8 @@
     <a href="#assessment">Professional Self-Assessment</a>
     <a href="#code-review">Code Review</a>
     <a href="#artifacts">Artifacts</a>
+    <a href="#outcomes">Course Outcomes</a>
+    <a href="#skills">Skills</a>
 </nav>
 
 <main>
@@ -132,8 +160,8 @@
         in software design and engineering, algorithms and data structures,
         and databases. Each artifact was reviewed and enhanced during the
         CS 499 Computer Science Capstone course to demonstrate how my
-        programming, problem-solving, software design, database, and security
-        skills have developed throughout the program.
+        programming, problem-solving, software design, database, testing,
+        and security skills have developed throughout the program.
     </p>
 </section>
 
@@ -169,18 +197,33 @@
         for improvement, and develop more reliable and maintainable
         computing solutions.
     </p>
+
+    <p>
+        My experience throughout the program also taught me the importance
+        of collaboration and communication in computer science. Technical
+        decisions often need to be explained to developers, managers,
+        clients, and other stakeholders with different levels of technical
+        knowledge. Through design documents, project documentation, code
+        reviews, presentations, and written assignments, I learned to
+        communicate technical information clearly while explaining the
+        reasoning behind important design decisions.
+    </p>
+
+    <p>
+        Security also became an important part of the way I evaluate software.
+        Through secure software development coursework, I gained experience
+        with dependency analysis, SHA-256 hashing, certificates, input
+        validation, and secure communication. These experiences taught me
+        that security should be considered throughout the development
+        process instead of being treated as something added only after
+        software has been completed.
+    </p>
 </section>
 
 
-<p>
-    The complete code review can be viewed below.
-</p>
+<section id="code-review">
+    <h2>Informal Code Review</h2>
 
-<a class="button"
-   href="https://youtu.be/tiTSeCmXi1k"
-   target="_blank">
-    Watch My Code Review
-</a>
     <p>
         During the first stage of the CS 499 Capstone, I completed a code
         review of the artifacts selected for enhancement. The code review
@@ -190,32 +233,54 @@
 
     <p>
         The review focused on software design and engineering, algorithms
-        and data structures, database development, security, maintainability,
-        and opportunities for improvement. This process helped guide the
-        enhancements presented in the portfolio.
+        and data structures, database development, security, testing,
+        maintainability, and opportunities for improvement. I also considered
+        how the planned enhancements would demonstrate the five CS 499 course
+        outcomes.
     </p>
+
+    <p>
+        The complete code review can be viewed below.
+    </p>
+
+    <a class="button"
+       href="https://youtu.be/tiTSeCmXi1k"
+       target="_blank"
+       rel="noopener noreferrer">
+        Watch My Code Review
+    </a>
 </section>
 
 
 <section id="artifacts">
-
     <h2>Artifact Enhancements</h2>
 
     <div class="artifact">
         <h3>Enhancement One: Software Design and Engineering</h3>
 
         <p>
-            This enhancement demonstrates my ability to improve the structure,
-            organization, and maintainability of an existing software project.
-            I reviewed the original implementation and applied software
-            engineering principles to reduce unnecessary complexity and create
-            a cleaner, more reusable design.
+            For this enhancement, I revisited my CS 330 computational
+            graphics project created with C++ and OpenGL. The project
+            demonstrates the construction of a three-dimensional scene
+            using meshes, transformations, textures, materials, and lighting.
         </p>
 
         <p>
-            The enhancement demonstrates skills in object-oriented programming,
-            modular design, code organization, debugging, documentation, and
-            maintainable software development.
+            I selected this artifact because it provided an opportunity to
+            improve an existing application rather than simply create another
+            program from the beginning. I focused on improving the structure,
+            organization, modularity, and maintainability of the code while
+            preserving the visual behavior of the original scene.
+        </p>
+
+        <p>
+            The enhancement demonstrates skills in object-oriented
+            programming, modular design, code organization, debugging,
+            documentation, reusable software components, and maintainable
+            software development. Revisiting the project also reinforced the
+            importance of evaluating existing code and improving its internal
+            design even when the original implementation already produces
+            the expected result.
         </p>
     </div>
 
@@ -227,8 +292,8 @@
             For the algorithms and data structures enhancement, I used my
             CS 330 3D Desk Lamp project. The project was originally developed
             using C++ and OpenGL and renders a three-dimensional desk lamp
-            using multiple meshes, transformations, textures, materials, and
-            lighting.
+            using multiple meshes, transformations, textures, materials,
+            and lighting.
         </p>
 
         <p>
@@ -241,10 +306,19 @@
         </p>
 
         <p>
-            This removed repeated rendering logic and made the scene easier
-            to maintain and expand. Building and rendering the object
-            collection both operate in O(n) linear time, where n represents
-            the number of scene objects.
+            This approach removed repeated rendering logic and made the
+            scene easier to maintain and expand. Instead of creating separate
+            rendering logic for every new object, additional objects can be
+            stored in the collection and processed using the same algorithm.
+        </p>
+
+        <p>
+            Building and rendering the object collection both operate in
+            O(n) linear time, where n represents the number of scene objects.
+            Evaluating the complexity of these operations helped me consider
+            not only whether the program worked correctly, but also how the
+            organization of the data and the rendering algorithm affect the
+            scalability and maintainability of the application.
         </p>
     </div>
 
@@ -270,16 +344,96 @@
         <p>
             I also added API validation tests using Jest and Supertest. The
             tests verify that invalid POST and PUT requests return appropriate
-            400-level responses. These changes improve data integrity,
-            reliability, maintainability, and the overall quality of the
-            application.
+            400-level responses instead of allowing invalid information to
+            enter the application.
+        </p>
+
+        <p>
+            These changes improve data integrity, reliability,
+            maintainability, and the overall quality of the application.
+            This enhancement also reinforced the connection between database
+            design and application security because validation helps protect
+            the system from malformed or inappropriate data before it is
+            stored.
         </p>
     </div>
-
 </section>
 
 
-<section>
+<section id="outcomes">
+    <h2>CS 499 Course Outcomes Demonstrated</h2>
+
+    <div class="outcome">
+        <h3>Collaboration and Decision Making</h3>
+        <p>
+            Throughout the Computer Science program, I learned that software
+            development requires communication and collaboration with people
+            who may have different technical backgrounds and responsibilities.
+            My code review, documentation, project planning, and design work
+            demonstrate my ability to explain technical decisions and provide
+            information that can support decisions made by developers,
+            managers, clients, and other stakeholders.
+        </p>
+    </div>
+
+    <div class="outcome">
+        <h3>Professional Communication</h3>
+        <p>
+            This ePortfolio demonstrates professional written, visual, and
+            oral communication through the organization of my technical work,
+            enhancement narratives, professional self-assessment, source code,
+            documentation, and code review video. I learned to explain not
+            only what I changed in a system, but why the change was useful
+            and how it improved the solution.
+        </p>
+    </div>
+
+    <div class="outcome">
+        <h3>Algorithms and Computing Solutions</h3>
+        <p>
+            My algorithms and data structures enhancement demonstrates my
+            ability to evaluate a computing problem and improve its solution
+            using appropriate algorithmic principles and data structures.
+            Organizing scene objects in a vector and processing them through
+            reusable rendering logic reduced duplication while maintaining
+            linear O(n) processing of the collection. This required me to
+            consider trade-offs involving readability, scalability,
+            maintainability, and implementation complexity.
+        </p>
+    </div>
+
+    <div class="outcome">
+        <h3>Computing Techniques, Skills, and Tools</h3>
+        <p>
+            My artifacts demonstrate the use of several computing tools and
+            development techniques, including C++, OpenGL, JavaScript,
+            Node.js, Express.js, MongoDB, Mongoose, Angular, RESTful APIs,
+            GitHub, Jest, and Supertest. I used these technologies to improve
+            existing software, organize application components, validate
+            information, test application behavior, and create solutions
+            that are more reliable and maintainable.
+        </p>
+    </div>
+
+    <div class="outcome">
+        <h3>Security Mindset</h3>
+        <p>
+            My coursework and enhancements demonstrate a growing security
+            mindset. In secure software development coursework, I worked with
+            dependency analysis, SHA-256 checksum verification, certificates,
+            and secure communication concepts. In the Travlr enhancement, I
+            applied explicit database validation and tested invalid API
+            requests to reduce the possibility of malformed data being
+            accepted by the application. These experiences taught me to
+            consider vulnerabilities, validation, data integrity, and
+            potential misuse while designing and evaluating software rather
+            than waiting until development is complete.
+        </p>
+    </div>
+</section>
+
+
+<section id="skills">
     <h2>Skills Demonstrated</h2>
 
     <p>
@@ -287,14 +441,22 @@
         with C++, JavaScript, Node.js, Express.js, MongoDB, Mongoose, Angular,
         OpenGL, RESTful APIs, object-oriented programming, algorithms and data
         structures, database validation, software testing, secure development,
-        debugging, and technical documentation.
+        debugging, GitHub, and technical documentation.
     </p>
 
     <p>
         Together, these projects demonstrate my progression from completing
         individual programming assignments to evaluating software as a
-        complete system that must be efficient, secure, maintainable, and
-        useful to its intended users.
+        complete system that must be efficient, secure, maintainable,
+        reliable, and useful to its intended users.
+    </p>
+
+    <p>
+        My ePortfolio represents both the technical skills I developed and
+        the improvement in the way I approach computing problems. Instead of
+        focusing only on whether a program works, I now consider its design,
+        efficiency, security, testing, maintainability, data integrity, and
+        the needs of the people who will use or maintain the system.
     </p>
 </section>
 
